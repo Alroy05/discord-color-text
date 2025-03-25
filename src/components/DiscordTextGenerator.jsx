@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import {
     MantineProvider,
     Container,
@@ -7,7 +7,6 @@ import {
     Group,
     Tooltip,
     Card,
-    CopyButton
 } from '@mantine/core';
 
 const COLOR_MAPPINGS = {
@@ -86,7 +85,6 @@ const DiscordTextGenerator = () => {
         range.deleteContents();
         range.insertNode(span);
 
-        // Try to maintain selection (more robust)
         const newRange = document.createRange();
         newRange.setStartAfter(span);
         newRange.setEndAfter(span);
